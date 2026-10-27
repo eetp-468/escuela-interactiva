@@ -12,6 +12,19 @@ const __dirname = path.dirname(__filename);
 const publicDir = path.join(__dirname, 'public');
 
 app.disable('x-powered-by');
+
+app.use((req, res, next) => {
+  res.setHeader('Access-Control-Allow-Origin', 'https://eetp-468.github.io');
+  res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+
+  if (req.method === 'OPTIONS') {
+    return res.sendStatus(204);
+  }
+
+  next();
+});
+
 app.use(express.json({ limit: '20kb' }));
 app.use('/api/chat', rateLimit({ windowMs: 15 * 60 * 1000, limit: 30, standardHeaders: 'draft-7', legacyHeaders: false }));
 
