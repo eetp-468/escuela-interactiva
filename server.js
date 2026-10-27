@@ -56,5 +56,5 @@ app.post('/api/chat', async (req, res) => {
 });
 
 app.use(express.static(publicDir));
-app.get('*', (_req, res) => res.sendFile(path.join(publicDir, 'index.html')));
+app.get('/{*path}', (_req, res) => res.sendFile(path.join(publicDir, 'index.html')));
 app.listen(port, () => console.log(`Escuela Interactiva disponible en http://localhost:${port}`));
