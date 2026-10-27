@@ -1,0 +1,27 @@
+/* Chat flotante de Escuela Interactiva */
+.school-chat-launcher{position:fixed;right:24px;bottom:24px;z-index:1100;display:flex;align-items:center;gap:10px;min-height:58px;padding:0 20px;border:0;border-radius:999px;background:var(--blue-dark,#153B68);color:#fff;box-shadow:0 12px 32px rgba(21,59,104,.28);font-weight:750;cursor:pointer;transition:transform .2s,background .2s}
+.school-chat-launcher:hover{transform:translateY(-2px);background:var(--blue-main,#1D5B96)}
+.school-chat-launcher>span:first-child{font-size:24px}
+.school-chat-launcher-label{font-size:13px}
+.school-chat-panel{position:fixed;right:24px;bottom:94px;z-index:1101;display:flex;width:min(390px,calc(100vw - 28px));height:min(590px,calc(100dvh - 125px));min-height:350px;flex-direction:column;overflow:hidden;border:1px solid var(--border,#DCE6F2);border-radius:20px;background:#fff;box-shadow:0 18px 60px rgba(21,59,104,.23)}
+.school-chat-header{display:flex;align-items:center;gap:11px;padding:16px;background:var(--blue-dark,#153B68);color:#fff}
+.school-chat-avatar{display:grid;width:42px;height:42px;flex:0 0 42px;place-items:center;border-radius:13px;background:rgba(255,255,255,.15);font-size:23px}
+.school-chat-heading{display:flex;min-width:0;flex:1;flex-direction:column;gap:5px}
+.school-chat-heading strong{font-size:13px;line-height:1.35}
+.school-chat-heading small{display:flex;align-items:center;gap:6px;color:#dceafa;font-size:11px}
+.school-chat-status-dot{width:7px;height:7px;border-radius:50%;background:#77d7a6}
+.school-chat-close{width:34px;height:34px;border:0;border-radius:50%;background:rgba(255,255,255,.12);color:#fff;font-size:25px;line-height:1;cursor:pointer}
+.school-chat-messages{display:flex;flex:1;flex-direction:column;gap:12px;overflow-y:auto;padding:17px;background:#f6f9fd}
+.school-chat-message{max-width:88%;padding:11px 13px;border-radius:15px;font-size:13px;line-height:1.65;white-space:pre-wrap;overflow-wrap:anywhere}
+.school-chat-message.assistant{align-self:flex-start;border:1px solid #e0e9f4;border-bottom-left-radius:5px;background:#fff;color:var(--text,#26384D)}
+.school-chat-message.user{align-self:flex-end;border-bottom-right-radius:5px;background:var(--blue-main,#1D5B96);color:#fff}
+.school-chat-message.pending{color:var(--text-muted,#63758B);font-style:italic}
+.school-chat-form{display:flex;align-items:flex-end;gap:9px;padding:12px;border-top:1px solid var(--border,#DCE6F2);background:#fff}
+.school-chat-form textarea{display:block;min-width:0;max-height:110px;flex:1;resize:vertical;padding:11px 12px;border:1px solid var(--border,#DCE6F2);border-radius:12px;outline:none;background:#f8fafd;color:var(--text,#26384D);font-size:13px;line-height:1.45}
+.school-chat-form textarea:focus{border-color:var(--blue-main,#1D5B96);box-shadow:0 0 0 3px rgba(29,91,150,.1)}
+.school-chat-form button{width:42px;height:42px;flex:0 0 42px;border:0;border-radius:12px;background:var(--blue-main,#1D5B96);color:#fff;font-size:20px;cursor:pointer}
+.school-chat-form button:disabled{opacity:.5;cursor:wait}
+.school-chat-footnote{margin:0;padding:0 13px 11px;background:#fff;color:var(--text-muted,#63758B);font-size:10px;line-height:1.5}
+.school-chat-sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+@media(max-width:560px){.school-chat-launcher{right:14px;bottom:14px;min-height:54px;padding:0 16px}.school-chat-panel{right:8px;bottom:78px;width:calc(100vw - 16px);height:min(640px,calc(100dvh - 95px));min-height:320px;border-radius:17px}.school-chat-launcher-label{font-size:12px}}
+@media(prefers-reduced-motion:reduce){.school-chat-launcher{transition:none}}

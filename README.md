@@ -1,4 +1,4 @@
-[README.md](https://github.com/user-attachments/files/34038708/README.md)# Chatbot Gemini para Escuela Interactiva
+# Chatbot Gemini para Escuela Interactiva
 
 Este paquete agrega un botón flotante de chat con una interfaz que usa la paleta azul del sitio. La API Key se lee en el servidor desde `.env`; nunca se envía al navegador.
 
@@ -32,4 +32,3 @@ Este paquete agrega un botón flotante de chat con una interfaz que usa la palet
 - `server.js`: servidor backend que llama a Gemini y aplica límite básico de solicitudes.
 
 El historial del chat se mantiene solo en memoria del navegador y no se guarda en una base de datos. La API puede tener límites de uso o cargos según tu cuenta y el modelo. Revisá el uso en Google AI Studio. Para publicar la web, desplegá el backend en un servicio compatible con Node y configurá `GEMINI_API_KEY` como secreto del entorno; no publiques `.env`.
-

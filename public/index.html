@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Conocé nuestra escuela técnica, sus talleres, proyectos y comunidad educativa.">
+  <title>Nuestra Escuela | Feria de Ciencias</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="chatbot.css">
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/selfie_segmentation@0.1.1675465747/selfie_segmentation.js" defer crossorigin="anonymous"></script>
+  <script src="script.js" defer></script>
+  <script src="chatbot.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="#inicio" aria-label="Ir al inicio">
+        <span class="brand-mark">IE</span>
+        <span class="brand-copy">
+          <strong>NOMBRE DE LA ESCUELA</strong>
+          <small>Educación técnica · Feria de Ciencias</small>
+        </span>
+      </a>
+
+      <button class="menu-toggle" id="menu-toggle" type="button"
+        aria-label="Abrir menú" aria-expanded="false" aria-controls="site-nav">☰</button>
+
+      <nav class="nav" id="site-nav" aria-label="Navegación principal">
+        <a href="#inicio">Inicio</a>
+
+        <div class="nav-dropdown">
+          <button class="dropdown-toggle" type="button" aria-expanded="false">Colegio</button>
+          <div class="dropdown-menu">
+            <a href="#colegio">Nuestra escuela</a>
+            <a href="#vida-escolar">Vida escolar</a>
+          </div>
+        </div>
+
+        <div class="nav-dropdown">
+          <button class="dropdown-toggle" type="button" aria-expanded="false">Experiencias</button>
+          <div class="dropdown-menu">
+            <a href="#galeria">Galería de fotos</a>
+            <a href="#cabina">Cabina fotográfica</a>
+          </div>
+        </div>
+
+        <div class="nav-dropdown">
+          <button class="dropdown-toggle" type="button" aria-expanded="false">Información</button>
+          <div class="dropdown-menu">
+            <a href="#especialidades">Especialidades</a>
+            <a href="#ingreso">Ingreso e inscripción</a>
+            <a href="#preguntas">Preguntas frecuentes</a>
+          </div>
+        </div>
+
+        <a href="#asistente">Asistente virtual</a>
+        <a class="nav-cta" href="#contacto">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero-glow hero-glow-one"></div>
+      <div class="hero-glow hero-glow-two"></div>
+      <div class="hero-inner">
+        <span class="eyebrow">CONOCÉ NUESTRA COMUNIDAD EDUCATIVA</span>
+        <h1>Descubrí tu próximo <span>desafío.</span></h1>
+        <p class="hero-description">
+          Un lugar para aprender haciendo, explorar nuevas ideas y transformar
+          la curiosidad en proyectos que miran hacia el futuro.
+        </p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#colegio">Conocé la escuela <span aria-hidden="true">→</span></a>
+          <a class="button button-secondary" href="#galeria">Explorá la galería</a>
+        </div>
+        <div class="hero-note">
+          <span class="status-dot"></span>
+          Educación, tecnología y experiencias compartidas
+        </div>
+      </div>
+      <div class="hero-side-card" aria-hidden="true">
+        <span class="side-card-label">APRENDER</span>
+        <span class="side-card-symbol">✳</span>
+        <strong>Crear · Probar · Descubrir</strong>
+      </div>
+    </section>
+
+    <section class="section intro-section" id="colegio">
+      <div class="section-heading">
+        <span class="eyebrow">NUESTRA ESCUELA</span>
+        <h2>Mucho más que un lugar para estudiar</h2>
+        <p>
+          Somos una comunidad donde el conocimiento se construye con práctica,
+          trabajo en equipo y ganas de aprender.
+        </p>
+      </div>
+
+      <div class="feature-grid">
+        <article class="feature-card">
+          <span class="feature-icon">⌘</span>
+          <h3>Tecnología e informática</h3>
+          <p>Exploramos herramientas digitales, programación y proyectos tecnológicos.</p>
+          <a href="#galeria">Conocer el taller <span aria-hidden="true">→</span></a>
+        </article>
+        <article class="feature-card">
+          <span class="feature-icon">⚙</span>
+          <h3>Aprendizaje práctico</h3>
+          <p>Relacionamos los conocimientos con experiencias y actividades de taller.</p>
+          <a href="#especialidades">Descubrir más <span aria-hidden="true">→</span></a>
+        </article>
+        <article class="feature-card">
+          <span class="feature-icon">✦</span>
+          <h3>Una comunidad</h3>
+          <p>Estudiantes, docentes, preceptores y directivos forman parte del día a día.</p>
+          <a href="#vida-escolar">Ver la vida escolar <span aria-hidden="true">→</span></a>
+        </article>
+      </div>
+    </section>
+
+    <section class="section gallery-section" id="galeria">
+      <div class="section-heading">
+        <span class="eyebrow">CONOCÉ NUESTRA INSTITUCIÓN</span>
+        <h2>Un recorrido por nuestra escuela</h2>
+        <p>
+          Explorá nuestros talleres, conocé a quienes forman parte de la institución
+          y descubrí cómo es aprender en nuestra escuela.
+        </p>
+      </div>
+
+      <div class="gallery-category">
+        <div class="category-heading">
+          <span class="eyebrow">TECNOLOGÍA E INNOVACIÓN</span>
+          <h3>Taller de Informática</h3>
+          <p>Un espacio para desarrollar habilidades digitales, experimentar con la tecnología y crear proyectos.</p>
+        </div>
+        <div class="gallery-grid">
+          <button class="gallery-item" type="button" data-image="img/informatica-docentes.jpg" data-title="Docentes de Informática" data-description="El equipo docente acompaña a los estudiantes en su formación técnica.">
+            <img src="img/informatica-docentes.jpg" alt="Equipo docente del Taller de Informática" loading="lazy">
+            <span class="gallery-caption"><strong>Equipo docente</strong><span>Conocé a quienes acompañan nuestra formación técnica.</span></span>
+          </button>
+          <button class="gallery-item" type="button" data-image="img/informatica-aula.jpg" data-title="Aula de Informática" data-description="El salón donde se desarrollan clases y actividades de informática.">
+            <img src="img/informatica-aula.jpg" alt="Salón del Taller de Informática" loading="lazy">
+            <span class="gallery-caption"><strong>Nuestra aula</strong><span>El espacio donde aprendemos y trabajamos con computadoras.</span></span>
+          </button>
+          <button class="gallery-item" type="button" data-image="img/informatica-robotica.jpg" data-title="Proyectos de Robótica" data-description="Proyectos que combinan creatividad, programación y tecnología.">
+            <img src="img/informatica-robotica.jpg" alt="Proyectos y actividades de robótica" loading="lazy">
+            <span class="gallery-caption"><strong>Robótica</strong><span>Proyectos que combinan creatividad, programación y tecnología.</span></span>
+          </button>
+          <button class="gallery-item" type="button" data-image="img/informatica-panoramica.jpg" data-title="Vista general del Taller de Informática" data-description="Una mirada general a los espacios y recursos de trabajo del taller.">
+            <img src="img/informatica-panoramica.jpg" alt="Vista panorámica del Taller de Informática" loading="lazy">
+            <span class="gallery-caption"><strong>Un recorrido por el taller</strong><span>Una vista general de nuestros espacios y recursos.</span></span>
+          </button>
+        </div>
+      </div>
+
+      <div class="gallery-category">
+        <div class="category-heading">
+          <span class="eyebrow">PRÁCTICA Y CONOCIMIENTO</span>
+          <h3>Taller de Mecánica</h3>
+          <p>Un entorno de aprendizaje práctico donde los conocimientos técnicos se ponen en acción.</p>
+        </div>
+        <div class="gallery-grid">
+          <button class="gallery-item" type="button" data-image="img/mecanica-docentes.jpg" data-title="Docentes de Mecánica" data-description="Los profesores guían las prácticas y comparten sus conocimientos técnicos.">
+            <img src="img/mecanica-docentes.jpg" alt="Equipo docente del Taller de Mecánica" loading="lazy">
+            <span class="gallery-caption"><strong>Equipo docente</strong><span>Quienes guían las prácticas y el aprendizaje del taller.</span></span>
+          </button>
+          <button class="gallery-item" type="button" data-image="img/mecanica-general.jpg" data-title="Vista general del Taller de Mecánica" data-description="Una vista del espacio destinado a la formación mecánica.">
+            <img src="img/mecanica-general.jpg" alt="Vista general del Taller de Mecánica" loading="lazy">
+            <span class="gallery-caption"><strong>Conocé el taller</strong><span>Un recorrido visual por el espacio de formación.</span></span>
+          </button>
+          <button class="gallery-item" type="button" data-image="img/mecanica-maquinas.jpg" data-title="Máquinas y herramientas" data-description="Algunos de los equipos utilizados durante las actividades prácticas.">
+            <img src="img/mecanica-maquinas.jpg" alt="Máquinas utilizadas en el Taller de Mecánica" loading="lazy">
+            <span class="gallery-caption"><strong>Máquinas y herramientas</strong><span>Conocé algunos de los equipos que utilizamos.</span></span>
+          </button>
+          <button class="gallery-item" type="button" data-image="img/mecanica-alumnos.jpg" data-title="Estudiantes de Mecánica" data-description="Estudiantes compartiendo una experiencia de aprendizaje en el taller.">
+            <img src="img/mecanica-alumnos.jpg" alt="Grupo de estudiantes en el Taller de Mecánica" loading="lazy">
+            <span class="gallery-caption"><strong>Aprender en equipo</strong><span>Experiencias compartidas y habilidades técnicas.</span></span>
+          </button>
+        </div>
+      </div>
+
+      <div class="gallery-category">
+        <div class="category-heading">
+          <span class="eyebrow">COMUNIDAD EDUCATIVA</span>
+          <h3>Nuestra Escuela</h3>
+          <p>Los espacios y las personas que hacen posible la vida escolar todos los días.</p>
+        </div>
+        <div class="gallery-grid">
+          <button class="gallery-item" type="button" data-image="img/escuela-patio.jpg" data-title="Patio escolar" data-description="Un lugar de encuentro, descanso y convivencia entre estudiantes.">
+            <img src="img/escuela-patio.jpg" alt="Patio de la escuela" loading="lazy">
+            <span class="gallery-caption"><strong>Nuestro patio</strong><span>Un lugar de encuentro y convivencia.</span></span>
+          </button>
+          <button class="gallery-item" type="button" data-image="img/escuela-directivos.jpg" data-title="Equipo directivo" data-description="El equipo directivo acompaña y coordina el proyecto educativo institucional.">
+            <img src="img/escuela-directivos.jpg" alt="Equipo directivo de la institución" loading="lazy">
+            <span class="gallery-caption"><strong>Equipo directivo</strong><span>Quienes coordinan y acompañan el proyecto educativo.</span></span>
+          </button>
+          <button class="gallery-item" type="button" data-image="img/escuela-preceptores.jpg" data-title="Equipo de preceptores" data-description="Los preceptores acompañan a los estudiantes en su día a día escolar.">
+            <img src="img/escuela-preceptores.jpg" alt="Equipo de preceptores" loading="lazy">
+            <span class="gallery-caption"><strong>Nuestros preceptores</strong><span>Parte fundamental del acompañamiento cotidiano.</span></span>
+          </button>
+          <button class="gallery-item" type="button" data-image="img/escuela-sala-profesores.jpg" data-title="Sala de profesores" data-description="Un espacio de encuentro, planificación e intercambio entre docentes.">
+            <img src="img/escuela-sala-profesores.jpg" alt="Sala de profesores de la escuela" loading="lazy">
+            <span class="gallery-caption"><strong>Sala de profesores</strong><span>Un espacio de encuentro y planificación docente.</span></span>
+          </button>
+        </div>
+      </div>
+
+      <div class="gallery-modal" id="gallery-modal" role="dialog" aria-modal="true" aria-labelledby="gallery-modal-title" hidden>
+        <button class="gallery-close" id="gallery-close" type="button" aria-label="Cerrar fotografía">×</button>
+        <img id="gallery-modal-image" src="" alt="">
+        <div class="modal-copy">
+          <h3 id="gallery-modal-title"></h3>
+          <p id="gallery-modal-description"></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section booth-section" id="cabina">
+      <div class="section-heading">
+        <span class="eyebrow">TU RECUERDO DE LA FERIA</span>
+        <h2>Cabina fotográfica</h2>
+        <p>Sacate una foto y llevate un recuerdo de tu experiencia en nuestra escuela.</p>
+      </div>
+
+      <div class="booth-container">
+        <div class="booth-intro">
+          <span class="booth-icon">✦</span>
+          <h3>¡Es tu momento!</h3>
+          <p>Activá la cámara, elegí tu mejor pose y guardá tu fotografía.</p>
+        </div>
+        <div class="booth-camera">
+          <div class="booth-preview">
+            <video id="booth-video" autoplay playsinline muted hidden></video>
+            <canvas id="booth-live-canvas" aria-label="Vista previa con el fondo reemplazado" hidden></canvas>
+            <div class="booth-placeholder" id="booth-placeholder">
+              <span class="camera-symbol">◎</span>
+              <strong>Tu foto empieza acá</strong>
+              <span>Elegí un fondo y activá la cámara</span>
+            </div>
+            <img id="booth-photo" alt="Vista previa de tu fotografía" hidden>
+          </div>
+          <p class="booth-status" id="booth-status" role="status" aria-live="polite">Tu cámara todavía no está activada.</p>
+          <p class="booth-keyboard-hint">Atajo: presioná <kbd>Enter</kbd> para sacar la foto cuando la cámara esté activa.</p>
+          <div class="booth-actions">
+            <button class="button button-primary" id="booth-start" type="button">Activar cámara</button>
+            <button class="button button-primary" id="booth-capture" type="button" disabled>Sacar foto</button>
+            <button class="button button-secondary" id="booth-retake" type="button" hidden>Volver a sacar</button>
+            <a class="button button-secondary" id="booth-download" href="#" download="mi-foto-feria.png" hidden>Descargar foto</a>
+            <button class="button button-secondary" id="booth-stop" type="button" disabled>Apagar cámara</button>
+          </div>
+          <canvas id="booth-canvas" hidden></canvas>
+        </div>
+        <div class="booth-backgrounds">
+          <h3>Elegí el fondo de tu foto</h3>
+          <p>Elegí cualquiera de estos fondos; el cambio se aplica a la vista previa y a la próxima foto.</p>
+          <div class="background-options">
+            <button class="background-option" type="button" data-background="img/informatica-aula.jpg" aria-pressed="true" style="background-image:linear-gradient(0deg,rgba(12,35,64,.78),rgba(12,35,64,.05)),url('img/informatica-aula.jpg')"><span>Salón de Informática</span></button>
+            <button class="background-option" type="button" data-background="img/escuela-patio.jpg" aria-pressed="false" style="background-image:linear-gradient(0deg,rgba(12,35,64,.78),rgba(12,35,64,.05)),url('img/escuela-patio.jpg')"><span>Patio de la escuela</span></button>
+            <button class="background-option" type="button" data-background="img/mecanica-general.jpg" aria-pressed="false" style="background-image:linear-gradient(0deg,rgba(12,35,64,.78),rgba(12,35,64,.05)),url('img/mecanica-general.jpg')"><span>Taller de Mecánica</span></button>
+          </div>
+          <p class="booth-note">El recorte usa segmentación de persona en el navegador. Para que los fondos aparezcan, guardá las fotos correspondientes en la carpeta <code>img</code>. Necesitás conexión a internet para cargar el modelo de segmentación.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section info-section" id="especialidades">
+      <div class="section-heading">
+        <span class="eyebrow">FORMACIÓN TÉCNICA</span>
+        <h2>Aprender haciendo</h2>
+        <p>Conocé las áreas de formación que forman parte de la experiencia escolar.</p>
+      </div>
+      <div class="info-grid">
+        <article class="info-card">
+          <span class="info-number">01</span>
+          <h3>Informática</h3>
+          <p>Un espacio para explorar computadoras, herramientas digitales, programación y proyectos tecnológicos.</p>
+        </article>
+        <article class="info-card">
+          <span class="info-number">02</span>
+          <h3>Mecánica</h3>
+          <p>Actividades prácticas para conocer máquinas, herramientas y procesos técnicos.</p>
+        </article>
+        <article class="info-card">
+          <span class="info-number">03</span>
+          <h3>Proyectos interdisciplinarios</h3>
+          <p>Experiencias que conectan ideas, conocimientos y trabajo colaborativo.</p>
+        </article>
+      </div>
+      <p class="small-note">Completá o corregí estas descripciones según las especialidades y el plan de estudios reales de la escuela.</p>
+    </section>
+
+    <section class="section split-section" id="vida-escolar">
+      <div class="split-copy">
+        <span class="eyebrow">FORMAMOS UNA COMUNIDAD</span>
+        <h2>La escuela se construye entre todos</h2>
+        <p>La vida escolar incluye mucho más que las clases: también son importantes los talleres, los proyectos, los vínculos y el acompañamiento de cada persona de la institución.</p>
+        <a class="button button-primary" href="#galeria">Recorrer la galería</a>
+      </div>
+      <div class="split-art" aria-hidden="true">
+        <div class="art-circle circle-one"></div>
+        <div class="art-circle circle-two"></div>
+        <div class="art-card"><span>IDEAS</span><strong>Aprender<br>en comunidad.</strong><span class="art-star">✳</span></div>
+      </div>
+    </section>
+
+    <section class="section compact-section" id="ingreso">
+      <div class="section-heading">
+        <span class="eyebrow">FUTUROS INGRESANTES</span>
+        <h2>¿Querés conocer más sobre el ingreso?</h2>
+        <p>Consultá en la escuela las fechas, requisitos y documentación vigentes para la inscripción.</p>
+      </div>
+      <div class="notice-card">
+        <strong>Información de inscripción</strong>
+        <p>Los períodos y requisitos pueden cambiar cada año. Confirmá los datos actualizados directamente con la institución.</p>
+        <a class="text-link" href="#contacto">Ver información de contacto →</a>
+      </div>
+    </section>
+
+    <section class="section compact-section" id="preguntas">
+      <div class="section-heading">
+        <span class="eyebrow">TE AYUDAMOS</span>
+        <h2>Preguntas frecuentes</h2>
+        <p>Algunas respuestas iniciales para quienes quieren conocer la escuela.</p>
+      </div>
+      <div class="faq-list">
+        <details>
+          <summary>¿Cómo puedo conocer los talleres?</summary>
+          <p>Podés recorrer la galería de esta página. Para visitas presenciales, consultá con la institución.</p>
+        </details>
+        <details>
+          <summary>¿Dónde consulto los requisitos de inscripción?</summary>
+          <p>Contactá a la escuela para obtener la información oficial y actualizada.</p>
+        </details>
+        <details>
+          <summary>¿La cabina fotográfica guarda mis fotos en internet?</summary>
+          <p>En esta versión, la fotografía se crea en tu navegador y podés descargarla en tu dispositivo. No se envía a un servidor desde esta página.</p>
+        </details>
+        <details>
+          <summary>¿Cómo puedo conocer las especialidades?</summary>
+          <p>Revisá la sección de formación técnica y consultá a la escuela para confirmar la oferta educativa vigente.</p>
+        </details>
+      </div>
+    </section>
+
+    <section class="section assistant-section" id="asistente">
+      <div class="assistant-card">
+        <div class="assistant-mark" aria-hidden="true">✦</div>
+        <div class="assistant-copy">
+          <span class="eyebrow">ASISTENTE VIRTUAL</span>
+          <h2>¿Tenés alguna pregunta?</h2>
+          <p>Estamos preparando un asistente para responder consultas sobre la escuela, los talleres y el ingreso.</p>
+          <p class="small-note">El chat todavía no está conectado a DeepSeek. Para activarlo de forma segura necesitaremos un pequeño servidor y una API key protegida.</p>
+        </div>
+        <button class="button button-primary" id="open-school-chat" type="button">Abrir asistente virtual</button>
+      </div>
+    </section>
+
+    <section class="section contact-section" id="contacto">
+      <div class="contact-card">
+        <span class="eyebrow">ESTAMOS PARA AYUDARTE</span>
+        <h2>Contactate con la escuela</h2>
+        <p>Agregá acá los medios oficiales de contacto para que las familias y futuros estudiantes puedan hacer sus consultas.</p>
+        <div class="contact-placeholder">
+          <span>✉</span>
+          <div>
+            <strong>Datos institucionales</strong>
+            <p>Reemplazá este texto por el correo, teléfono, dirección o redes oficiales de la escuela.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <a class="brand footer-brand" href="#inicio">
+        <span class="brand-mark">IE</span>
+        <span class="brand-copy"><strong>NOMBRE DE LA ESCUELA</strong><small>Educación técnica · Feria de Ciencias</small></span>
+      </a>
+      <p>Una comunidad para aprender, crear y descubrir.</p>
+      <a href="#inicio">Volver arriba ↑</a>
+    </div>
+    <div class="footer-bottom">© <span id="current-year"></span> · Proyecto educativo de feria de ciencias</div>
+  </footer>
+
+
+  <!-- Chat flotante de Gemini: la clave nunca se coloca en este HTML. -->
+  <button class="school-chat-launcher" id="school-chat-launcher" type="button" aria-label="Abrir asistente virtual" aria-controls="school-chat-panel" aria-expanded="false">
+    <span aria-hidden="true">✦</span><span class="school-chat-launcher-label">Preguntale a la escuela</span>
+  </button>
+  <section class="school-chat-panel" id="school-chat-panel" role="dialog" aria-modal="false" aria-labelledby="school-chat-title" hidden>
+    <header class="school-chat-header">
+      <div class="school-chat-avatar" aria-hidden="true">✦</div>
+      <div class="school-chat-heading"><strong id="school-chat-title">Asistente de Escuela Interactiva</strong><small><span class="school-chat-status-dot"></span> Gemini · Asistente virtual</small></div>
+      <button class="school-chat-close" id="school-chat-close" type="button" aria-label="Cerrar chat">×</button>
+    </header>
+    <div class="school-chat-messages" id="school-chat-messages" role="log" aria-live="polite" aria-relevant="additions text">
+      <div class="school-chat-message assistant">¡Hola! Soy el asistente virtual de Escuela Interactiva. Puedo ayudarte con la información de esta página, los talleres y las consultas sobre ingreso. ¿Qué querés saber?</div>
+    </div>
+    <form class="school-chat-form" id="school-chat-form">
+      <label class="school-chat-sr-only" for="school-chat-input">Escribí tu consulta</label>
+      <textarea id="school-chat-input" name="message" rows="1" maxlength="2000" placeholder="Escribí tu consulta…" required></textarea>
+      <button id="school-chat-send" type="submit" aria-label="Enviar mensaje">➤</button>
+    </form>
+    <p class="school-chat-footnote">Las respuestas las genera una IA y pueden contener errores. Para datos oficiales, consultá con la escuela.</p>
+  </section>
+
+  <div class="toast" id="site-toast" role="status" aria-live="polite" hidden></div>
+</body>
+</html>
