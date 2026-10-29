@@ -1,3 +1,4 @@
+
 /* =========================================
    1. VARIABLES Y CONFIGURACIÓN GENERAL
 ========================================= */
@@ -362,32 +363,6 @@ button:focus-visible, a:focus-visible, summary:focus-visible {
 .faq-list summary { color: var(--blue-dark); font-size: 14px; font-weight: 750; cursor: pointer; }
 .faq-list details p { margin: 12px 0 0; color: var(--text-muted); font-size: 14px; line-height: 1.8; }
 
-/* Contactos centrados y uno debajo del otro */
-.contact-card {
-    text-align: center;
-}
-
-.contact-placeholder {
-    display: flex;
-    align-items: center;
-    gap: 14px;
-
-    width: 360px;
-    max-width: 100%;
-    box-sizing: border-box;
-
-    margin: 18px auto;
-    padding: 18px;
-
-    border-radius: 13px;
-    background: var(--background);
-    text-align: left;
-}
-
-.contact-placeholder span {
-    flex-shrink: 0;
-}
-
 /* =========================================
    8. ASISTENTE Y CONTACTO
 ========================================= */
@@ -397,13 +372,78 @@ button:focus-visible, a:focus-visible, summary:focus-visible {
 .assistant-copy h2 { margin-bottom: 8px; font-size: 27px; }
 .assistant-copy p { margin: 0; color: var(--text-muted); font-size: 14px; line-height: 1.8; }
 .assistant-copy .small-note { text-align: left; }
+
 .contact-section { padding-top: 35px; padding-bottom: 85px; }
-.contact-card { max-width: 800px; margin: 0 auto; padding: 38px; border: 1px solid var(--border); border-radius: 22px; background: white; text-align: center; box-shadow: var(--shadow); }
-.contact-card > p { max-width: 590px; margin: 0 auto; color: var(--text-muted); font-size: 14px; line-height: 1.8; }
-.contact-placeholder { display: flex; align-items: flex-start; gap: 14px; margin-top: 26px; padding: 18px; border-radius: 13px; background: var(--background); text-align: left; }
-.contact-placeholder > span { display: grid; width: 40px; height: 40px; flex-shrink: 0; place-items: center; border-radius: 11px; background: var(--blue-pale); color: var(--blue-main); font-size: 21px; }
-.contact-placeholder strong { color: var(--blue-dark); font-size: 14px; }
-.contact-placeholder p { margin: 4px 0 0; color: var(--text-muted); font-size: 13px; }
+
+.contact-card {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 38px;
+  border: 1px solid var(--border);
+  border-radius: 22px;
+  background: white;
+  text-align: center;
+  box-shadow: var(--shadow);
+}
+
+.contact-card h2 {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.contact-card > p {
+  max-width: 590px;
+  margin: 0 auto;
+  color: var(--text-muted);
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+/* Todos los contactos alineados verticalmente */
+.contact-placeholder {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  width: 100%;
+  max-width: 400px;
+  min-height: 85px;
+  margin: 16px auto;
+  padding: 18px;
+  box-sizing: border-box;
+  border-radius: 13px;
+  background: var(--background);
+  text-align: left;
+}
+
+.contact-placeholder > span {
+  display: grid;
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  place-items: center;
+  border-radius: 11px;
+  background: var(--blue-pale);
+  color: var(--blue-main);
+  font-size: 21px;
+}
+
+.contact-placeholder > div {
+  flex: 1;
+  min-width: 0;
+}
+
+.contact-placeholder strong {
+  display: block;
+  color: var(--blue-dark);
+  font-size: 14px;
+}
+
+.contact-placeholder p {
+  margin: 4px 0 0;
+  color: var(--text-muted);
+  font-size: 13px;
+  overflow-wrap: anywhere;
+}
 
 /* =========================================
    9. FOOTER Y MENSAJES
@@ -431,6 +471,7 @@ button:focus-visible, a:focus-visible, summary:focus-visible {
   .hero-side-card { right: 24px; width: 190px; opacity: .88; }
   .hero-inner { padding-right: 245px; }
 }
+
 @media (max-width: 760px) {
   .hero { min-height: auto; }
   .hero-inner { padding: 70px 22px; }
@@ -442,6 +483,7 @@ button:focus-visible, a:focus-visible, summary:focus-visible {
   .assistant-card > .button { grid-column: 1 / -1; }
   .footer-inner { flex-direction: column; align-items: flex-start; }
 }
+
 @media (max-width: 560px) {
   .header-inner { min-height: 72px; padding: 12px 16px; }
   .brand-mark { width: 41px; height: 41px; }
