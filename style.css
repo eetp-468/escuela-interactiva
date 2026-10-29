@@ -362,6 +362,32 @@ button:focus-visible, a:focus-visible, summary:focus-visible {
 .faq-list summary { color: var(--blue-dark); font-size: 14px; font-weight: 750; cursor: pointer; }
 .faq-list details p { margin: 12px 0 0; color: var(--text-muted); font-size: 14px; line-height: 1.8; }
 
+/* Contactos centrados y uno debajo del otro */
+.contact-card {
+    text-align: center;
+}
+
+.contact-placeholder {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+
+    width: 360px;
+    max-width: 100%;
+    box-sizing: border-box;
+
+    margin: 18px auto;
+    padding: 18px;
+
+    border-radius: 13px;
+    background: var(--background);
+    text-align: left;
+}
+
+.contact-placeholder span {
+    flex-shrink: 0;
+}
+
 /* =========================================
    8. ASISTENTE Y CONTACTO
 ========================================= */
