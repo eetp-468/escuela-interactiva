@@ -512,3 +512,22 @@ button:focus-visible, a:focus-visible, summary:focus-visible {
   .assistant-mark { width: 48px; height: 48px; }
   .contact-card { padding: 25px 17px; }
 }
+
+
+/* Logo de la escuela */
+.brand-mark {
+  display: grid;
+  width: 46px;
+  height: 46px;
+  place-items: center;
+  overflow: hidden;
+  border-radius: 13px;
+  background: white;
+  flex-shrink: 0;
+}
+
+.brand-mark img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
